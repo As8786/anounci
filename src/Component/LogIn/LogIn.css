@@ -1,0 +1,46 @@
+.login-container .form-container{
+    width : 50%;
+    margin: auto;   
+    text-align: center;
+}
+
+.login-container .form-container form {
+    width : 40%;
+    margin: auto;   
+    text-align: left; 
+}
+
+.login-container .input-line{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 17px;
+    margin-bottom:17px;
+}
+
+.login-container .input-line label{
+    font-size: 1.25em;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.login-container .input-line input{
+    width : 100%;
+    min-width: 400px;
+    outline: none;
+}
+
+
+.login-container .input-button{
+    text-align: left;   
+}
+
+@media screen and (max-width :1000px) {
+
+    .login-container .form-container{
+        width : 100%;
+    }  
+    .login-container .input-line input{
+        min-width: 200px;
+    }
+}

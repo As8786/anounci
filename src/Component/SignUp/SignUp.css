@@ -1,0 +1,45 @@
+.signup-container .form-container{
+    width : 50%;
+    margin: auto;   
+    text-align: center;
+}
+
+.signup-container .form-container form {
+    width : 40%;
+    margin: auto;  
+    text-align: left; 
+}
+
+.signup-container .input-line{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 17px;
+    margin-bottom:17px;
+}
+
+.signup-container .input-line label{
+    font-size: 1.25em;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.signup-container .input-line input{
+    width : 100%;
+    min-width: 400px;
+    outline: none;
+}
+
+.signup-container .signup-container .input-button{
+    text-align: left;   
+}
+
+@media screen and (max-width :1000px) {
+
+    .signup-container .form-container{
+        width : 100%;  
+    }  
+    .signup-container .input-line input{
+        min-width: 200px;
+    }
+}
