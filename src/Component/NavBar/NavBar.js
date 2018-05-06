@@ -22,13 +22,13 @@ class NavBar extends React.Component {
       <div className="navbar-container">
         <div className="navbar-large-size">
           <div className="left-side">
-            <input type="button" value="Déposer une annonce" />
+          <Link to="/LogIn"> <input type="button" value="Déposer une annonce" /> </Link>
           </div>
           <div className="center">
-            <h2> ANOUNCI </h2>
+            <Link to="/" style={{textDecoration:"none", color:"whitesmoke"}} ><h2> ANOUNCI </h2> </Link>
           </div>
           <div className="right-side">
-            <Link to="/log-in">
+            <Link to="/LogIn">
               <i class="fas fa-user" />
             </Link>
           </div>
@@ -38,8 +38,8 @@ class NavBar extends React.Component {
           <div className="menu-icon">
             {this.state.isMenuDipslayed ? <i class="far fa-window-close" onClick={this.toggleIsMenuDiplayedValue}></i>  :<i class="fas fa-bars" onClick={this.toggleIsMenuDiplayedValue}/>}
             <ul className="link-list" style={this.state.isMenuDipslayed ? {display:"block"} : {display:"none"} }>
-            <Link to="/log-in"> <li> Log In </li> </Link>   
-            <Link to="/log-in">    <li> Déposer une annonce </li> </Link>
+            <Link to="/LogIn"> <li> Log In </li> </Link>   
+            <Link to="/LogIn"> <li> Déposer une annonce </li> </Link>
             </ul>
           </div>
           <div className="logo">
