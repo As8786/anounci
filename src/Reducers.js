@@ -26,6 +26,17 @@ const Lieux =(state = LieuxList, action) => {
     } 
 }
 
+const ConnectedUser = (state={}, action) => {
+    switch(action.type){
+        case "ADD_USER" :
+            return state = action.data
+        case "LOG_OUT" :
+            return state = {}    
+        default : 
+            return state    
+    } 
+}
+
 
 const CurrentAnnouncement = (state, action) => {
     switch(action.type) {
@@ -44,7 +55,8 @@ const Reducers = combineReducers({
     Announcements,
     CurrentAnnouncement,
     Categories,
-    Lieux
+    Lieux,
+    ConnectedUser
 })
 
 export default Reducers

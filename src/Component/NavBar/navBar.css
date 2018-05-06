@@ -45,6 +45,12 @@
     transition: ease 1s;
 }
 
+.navbar-large-size .right-side span{
+    color :rgb(85, 85, 85);
+    margin : 0 7px 0 17px;
+    font-size: .8em;
+}
+
 .navbar-large-size .right-side i:hover {
     color : rgb(141, 141, 252);
 }

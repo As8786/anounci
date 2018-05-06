@@ -42,7 +42,7 @@ class SignUp extends React.Component {
 
   addNewUser = () => {  
     axios.post("/addNewUser", {...this.state}).then(
-      res=> window("User added, Welcome on your platform")
+      res=> {alert(`Account was created for ${res.data[0].name}`)}
     )
   }
 
@@ -73,7 +73,7 @@ class SignUp extends React.Component {
               <div className="input-button">
                 <input type="button" value="Submit" 
                 onClick={(e)=>{
-                  this.formValidator(this.state).length===0 ? console.log("userAded") : alert(this.formValidator(this.state)) }}/>
+                  this.formValidator(this.state).length===0 ? this.addNewUser(this.state) : alert(this.formValidator(this.state)) }}/>
               </div>
               
             </form>

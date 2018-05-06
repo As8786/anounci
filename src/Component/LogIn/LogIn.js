@@ -1,5 +1,7 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
+import axios from 'axios'
+import {connect} from 'react-redux'
 
 import "./LogIn.css";
 
@@ -29,8 +31,16 @@ class LogIn extends React.Component {
     return message
   }
 
-  
+  getUser = () => {
+    axios.get(`/users/${this.state.email}`).then (
+      res=> this.props.fecthUserInformation(res.data)
+    )
+  }
+
+
   render() {
+    console.log(this.props.connectedUser.name)
+    {this.props.connectedUser.name ? <Redirect to='/home'/> :""}
     return (
       <div className="login-container">
           <form>
@@ -46,14 +56,14 @@ class LogIn extends React.Component {
 
             <div className="input-button">
               <input type="button" value="Submit" 
-                onClick={()=>{this.formValidator(this.state).length === 0 ? alert('user added') : alert(this.formValidator(this.state))}}
+                onClick={()=>{this.formValidator(this.state).length === 0 ? this.getUser() : alert(this.formValidator(this.state))}}
               />
             </div>
             
             <div className="condition-signIn" >
                 <p>
                    No account, 
-                   <Link to="/SignUp" className="signin-link">create one</Link> 
+                   <Link to="/signup" className="signin-link">create one</Link> 
                 </p>  
             </div>
           </form>
@@ -62,4 +72,22 @@ class LogIn extends React.Component {
   }
 }
 
-export default LogIn;
+const mapStateToProps = (state) => {
+  return {
+    connectedUser : state.ConnectedUser
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fecthUserInformation  : user => {
+      dispatch({
+        type : "ADD_USER",
+        data : user
+      })
+    }
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(LogIn);
