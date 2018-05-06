@@ -2,26 +2,16 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Routes from "./Component/Routes/Routes";
 
-import AnnouncementInList from './Component/AnnouncementsListDisplay/AnnouncementsListDisplay'
+import './app.css'
+import NavBar from './Component/NavBar/NavBar'
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className="app">
+          <NavBar />
           <Routes />
-          <Link to="/LogIn">
-            <button> LogIn </button>
-          </Link>
-
-          <Link to="/SignUp">
-            <button> SignUp </button>
-          </Link>
-
-          <Link to="/announcements">
-            <button> Annonces </button>
-          </Link>
-
         </div>
       </Router>
     );

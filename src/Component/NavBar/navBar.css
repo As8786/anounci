@@ -1,0 +1,135 @@
+.navbar-container {
+    max-height : 15vh;
+    background-color: rgba(172, 226, 226, 0.342);
+    text-align: center;
+}
+
+.navbar-container .navbar-large-size{
+    display :flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-large-size .left-side{
+    width : 25%;
+    text-align: center;
+}
+
+.navbar-large-size .left-side input{
+    border: 1px solid rgb(110, 110, 110);
+    font-size : 0.7em;
+    font-weight: 600;
+    height :27px;
+    width : 150px;
+    border-radius : 4px;
+    color :rgb(85, 85, 85);
+    background-color: rgb(219, 221, 223);
+    transition: ease 1s;
+}
+
+.navbar-large-size .left-side input:hover{
+    background-color : rgb(141, 141, 252);
+    color: white;
+    font-size:0.75em;
+}
+
+.navbar-large-size .right-side {
+    width : 25%;
+    text-align: center;
+    font-size : 1.4em;
+}
+
+.navbar-large-size .right-side i {
+    font-size : 1.4em;
+    color : azure;
+    transition: ease 1s;
+}
+
+.navbar-large-size .right-side i:hover {
+    color : rgb(141, 141, 252);
+}
+
+.navbar-large-size .center{
+    width :50%;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color : whitesmoke;
+    letter-spacing: 5px;
+    font-size: 1.4em;
+}
+
+.navbar-large-size .center h2{
+    margin : 12px 0 12px 0;
+}
+
+
+.navbar-container .responsive-navbar{
+    display: none;
+}
+
+.responsive-navbar{
+
+}
+
+.responsive-navbar .logo{
+    width :90%;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color : whitesmoke;
+    letter-spacing: 5px;
+    font-size: 1.4em;
+}
+
+.responsive-navbar .logo  h2 {
+    margin : 12px 0 12px 0;
+}
+
+.responsive-navbar .menu-icon {
+    padding-left :17px;
+    position :relative;
+}
+
+.responsive-navbar .menu-icon i{
+    font-size : 1.4em;
+    color : azure;
+}
+
+.responsive-navbar .menu-icon .link-list{
+    position :absolute;
+    width : 220px;
+    text-align: left;
+    padding: 0;
+    margin-top:17px;
+    border : 1px solid grey;
+    background-color: rgba(162, 206, 226, 0.493);
+    opacity: 0.8;
+}
+
+.responsive-navbar .menu-icon .link-list Link{
+    text-decoration: none;
+}
+
+.responsive-navbar .menu-icon .link-list li {
+    list-style-type: none;
+    font-size : 0.9em;
+    margin : 12px 0 12px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color : rgb(58, 55, 55);
+}
+
+.responsive-navbar .menu-icon .link-list li:hover {
+    color :white;
+}    
+@media screen and (max-width : 800px) {
+    .navbar-container .navbar-large-size{
+        display :none;
+    }
+
+    .navbar-container .responsive-navbar{
+        display : flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }    
+}

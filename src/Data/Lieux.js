@@ -1,0 +1,27 @@
+const LieuxList = [
+    "Ariana",
+    "Ben Arous",
+    "Bizerte",
+    "Beja",
+    "Gabes",
+    "Gafsa",
+    "Jendouba",
+    "Kairouan",
+    "Kasserine",
+    "Kbeli",
+    "Mannouba",
+    "Kef",
+    "Mahdia",
+    "Monastir",
+    "Médenine",
+    "Nabeul",
+    "Sfax",
+    "Sidi Bouzid",
+    "Siliana",
+    "Sousse",
+    "Tatouine",
+    "Tozeur",
+    "Tunis",
+    "Zaghouan"]
+
+export default LieuxList
