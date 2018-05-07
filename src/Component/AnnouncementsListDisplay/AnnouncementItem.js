@@ -11,12 +11,14 @@ class AnnoucementItem extends React.Component{
          <div className='announcement-item-container'
            onClick= {() => this.props.setCurrentAnnouncementValue(this.props.el)}>
                 <div className="img-container">
-                <Link to={`/single_announcement/${this.props.el.name}`} > <img src={this.props.el.image} /> </Link>
+                <Link to={`/single_announcement/${this.props.el.name}`} style={{textDecoration:"none"}}> <img src={this.props.el.image} /> </Link>
                 </div>
                 <div className ="description-container">
-                <Link to={`/single_announcement/${this.props.el.name}`} > <h3>{this.props.el.name}</h3> </Link>
-                <h3>{this.props.el.price}</h3> 
-                <h4>{this.props.el.description}</h4>
+                <Link to={`/single_announcement/${this.props.el.name}`} 
+                style={{textDecoration:"none", color:"inherit"}} 
+                className="title-link"> <p>{this.props.el.name}</p> </Link>
+                <p>{this.props.el.price}</p> 
+                <p>{this.props.el.description}</p>
                 </div>
             </div>
              
